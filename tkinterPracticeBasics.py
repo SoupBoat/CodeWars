@@ -4,7 +4,7 @@ import tkinter as tk
 # Create a window
 window = tk.Tk()
 window.title("My First GUI Program")
-window.geometry("400x200")
+window.geometry("600x400")
 
 
 # used frame1 and label1 to test locations
@@ -13,7 +13,7 @@ frame1 = tk.Frame(
     width=100,
     height=100
 )
-frame1.pack(side=tk.LEFT)   
+frame1.pack(fill=tk.BOTH, expand=True)   
 
 label1 = tk.Label(
     master = frame1,
@@ -33,7 +33,13 @@ label2 = tk.Label(
     fg="white",
     text = "frame 2"
 )
+# notice that I used place instead of pack
 label2.place(anchor="center", relx=0.5, rely=0.5)  # this is used to place the label in the center of the frame2
+
+# pack: is the simplest and most commonly used geometry manager. it organizes widgets in blocks before placing them
+# place: uses coordinates instead 
+# grid: organizes widgets in a table-like structure
+
 
 
 # this function interacts with the input from the user
@@ -47,7 +53,7 @@ lbl.pack()
 
 # Create a button to check whether the word is correct
 button = tk.Button(
-    master = frame1,
+    master = frame1,    # sets which frame its in
     text="Check Word",
     width=25,
     height=5,
@@ -72,7 +78,7 @@ is different for Text and Entry
 entry = tk.Entry(
     width=50
 )
-entry.pack(side=tk.LEFT)
+entry.pack(pady=10)
 
 
 

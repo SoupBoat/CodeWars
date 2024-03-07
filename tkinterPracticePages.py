@@ -15,6 +15,7 @@ because i didn't understand what was happening in the code.
 
 import tkinter as tk
 
+# this function is used to center the window
 def center_window(width, height):
     x = (root.winfo_screenwidth() // 2) - (width // 2)
     y = (root.winfo_screenheight() // 2) - (height // 2)
@@ -132,6 +133,6 @@ class MainWindow(tk.Frame):
         self.pack()     
 
 root = tk.Tk()
-root.eval('tk::PlaceWindow . center')
+root.eval('tk::PlaceWindow . center')   # this is used to center the window in tkinters base language
 WelcomeWindow(root)
 root.mainloop()

@@ -1,5 +1,4 @@
 import nltk
-import time
 import random
 nltk.data.path.append('/work/words')
 # nltk.download('words', download_dir='/work/words') # Uncomment this to download. Only needed for the first time you run the code.
