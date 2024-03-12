@@ -30,7 +30,7 @@ class WelcomeWindow(tk.Frame):
         center_window(200, 150)
         
         login_button = tk.Button(self, text="Login", width=10, command = self.on_login)
-        login_button.pack(padx=20, pady=(20, 10))
+        login_button.pack(padx=20, pady=(20, 10)) # the 20 is above and the 10 is below
         
         register_button = tk.Button(self, text="Register", width=10, command = self.on_register)
         register_button.pack(pady=10)
@@ -84,7 +84,6 @@ class LoginWindow(tk.Frame):
             widget.destroy()
         self.destroy()
         MainWindow(self.master)       
-
 
         
 class RegisterWindow(tk.Frame):

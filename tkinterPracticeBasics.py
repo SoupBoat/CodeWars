@@ -13,7 +13,7 @@ frame1 = tk.Frame(
     width=100,
     height=100
 )
-frame1.pack(fill=tk.BOTH, expand=True)   
+frame1.pack(side=tk.LEFT)   
 
 label1 = tk.Label(
     master = frame1,
@@ -51,6 +51,15 @@ def checkWord():
 lbl = tk.Label(text="")
 lbl.pack()
 
+
+def func(event):
+    print("You hit return.")
+
+
+def onclick(event):
+    print("You clicked the button")
+
+
 # Create a button to check whether the word is correct
 button = tk.Button(
     master = frame1,    # sets which frame its in
@@ -59,9 +68,13 @@ button = tk.Button(
     height=5,
     bg="blue",  # shorthand for background
     fg="red",    # shorthand for foreground
-    command=checkWord   # this is the function that will be called when the button is clicked
+    command=onclick   # this is the function that will be called when the button is clicked
 )
+
 button.pack()
+
+
+
 
 """
 tk.Entry    is a widget that allows the user to input a 
@@ -80,6 +93,7 @@ entry = tk.Entry(
 )
 entry.pack(pady=10)
 
+entry.bind('<Return>', onclick)
 
 
 # keep this at the end
