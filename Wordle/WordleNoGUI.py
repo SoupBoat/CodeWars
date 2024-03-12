@@ -1,5 +1,11 @@
 import random
 
+"""
+This is an odler version of whats in the WordleGUI. That one has custom games while this does not. 
+Its just more robust and customisable outside of code thats all.
+"""
+
+
 # uses the scrabble dictionary to get a list of words
 # the list is then filtered to only include words with 5 letters
 # for this code to run wordleDictionary.txt must be in the same directory
