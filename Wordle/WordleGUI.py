@@ -1,6 +1,8 @@
 import random
 import tkinter as tk
 
+## python -m PyInstaller --onefile WordleGUI.py  to create the executable
+
 #Defaults. On the Custom Page the user can change these values
 noLetters = 5  # number of letters in the word. Change this to allow for different length words.
 maxGuesses = 6  # number of guesses allowed. Change this to allow for more guesses.
@@ -41,7 +43,7 @@ class WelcomeWindow(tk.Frame):
         for widget in self.winfo_children():
             widget.destroy()
         self.destroy()
-        GameStart(self.master)
+        GameWindow(self.master)
 
     # go to rules page
     def on_rules(self):
@@ -141,9 +143,9 @@ class CustomWindow(tk.Frame):
         for widget in self.winfo_children():
             widget.destroy()
         self.destroy()
-        WelcomeWindow(self.master)   
+        GameWindow(self.master)   
 
-class GameStart(tk.Frame):
+class GameWindow(tk.Frame):
     def __init__(self, master):
         super().__init__()
         self.master = master
